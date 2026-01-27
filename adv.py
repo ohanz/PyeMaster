@@ -1,7 +1,7 @@
 # 1. Setup the data
 item_name = "Coffee"
 price = 4.50
-quantity = 2
+quantity = 20
 
 # 2. Do the math
 total = price * quantity
