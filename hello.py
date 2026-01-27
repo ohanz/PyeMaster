@@ -21,3 +21,4 @@ else:
 price = 10
 quantity = 3
 print(f"The total cost is: ${price * quantity}")
+
