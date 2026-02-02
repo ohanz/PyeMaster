@@ -12,7 +12,10 @@ while playing and hp > 0:
 
     if choice == "cave":
         print("It's dark. You found a 'Torch'!")
-        inventory.append("torch")
+        if "torch" not in inventory:
+            inventory.append("torch")
+        else:
+            print("You already have a torch. Keep moving.")
     elif choice == "river":
         print("The water is freezing! You lost 20 HP.")
         hp -= 20
