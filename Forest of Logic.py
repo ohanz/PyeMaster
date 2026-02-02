@@ -8,7 +8,7 @@ print("Welcome to the Forest of Logic!")
 
 while playing and hp > 0:
     print(f"\nHP: {hp} | Inventory: {inventory}")
-    choice = input("You see a 'cave' and a 'river'. Where do you go? ").lower()
+    choice = input("You see a 'cave', 'tunnel' and a 'river'. Where do you go? ").lower()
 
     if choice == "cave":
         print("It's dark. You found a 'Torch'!")
@@ -19,6 +19,14 @@ while playing and hp > 0:
     elif choice == "river":
         print("The water is freezing! You lost 20 HP.")
         hp -= 20
+    elif choice == "tunnel":
+        if "torch" in inventory:
+            print("You light your torch and find a Chest of Gold! You win!")
+            playing = False # Ends the game
+        else:
+            print("It's too dark to enter. You hear growling and run back!")
+            print("\n Check neighboring areas to find a torch. Do you see a cave?")
+            hp -= 10    
     elif choice == "quit":
         playing = False
     else:
